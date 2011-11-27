@@ -14,7 +14,7 @@ class Form
   # ...
   # <input type="submit" value="submit_value" ... />
   # </form>'
-  def to_s
+  def to_html
     str = '<form action="' + @action + '" method="' + @method + '">'
     @content.each do |c|
       if c.is_a?Hash
