@@ -1,12 +1,16 @@
 require 'open-uri'
 class Photo
-  attr_accessor :filename, :data, :id
+  attr_accessor :filename, :data, :id, :file_ext, :height, :width, :aviary_response
   
-  def initialize(filename='')
+  def initialize(file = nil, filename='')
     @filename = filename
     
-    @data = open(filename.to_s) {|f| f.read}
+    @data = file.read
     @id = nil
+  end
+  
+  def to_html
+    '<img src="/photos/' + id.to_s + '" />'
   end
   
 end
