@@ -84,6 +84,7 @@ end
 
 post '/photos/edit/?' do
   selected_photos = []
+  updated_photos = []
   selected_effects = []
   params.keys.each do |param|
     if BSON::ObjectId.legal?(param)
@@ -112,29 +113,38 @@ post '/photos/edit/?' do
       p format
       p quality
       p scale
-      p filepath
+      puts '
+      
+      '
+      p filepath #something is wrong with this response I'm getting.
+      puts '
+      
+      
+      '
       p effect_id
       p width
       p height
       p rpc
       
-      rpc = AviaryFX::RenderParameterCollection.new_from_json(render_parameters = '{
-         "parameters":  [
-           { "id" : "Text Top", "value" : "asdfasdfasdf"},
-           { "id" : "Text Bottom", "value" : "OR JUST STUPID"}
-         ]
-      }')
-      puts ''
-      p rpc
+      # rpc = AviaryFX::RenderParameterCollection.new_from_json(render_parameters = '{
+      #    "parameters":  [
+      #      { "id" : "Text Top", "value" : "asdfasdfasdf"},
+      #      { "id" : "Text Bottom", "value" : "OR JUST STUPID"}
+      #    ]
+      # }')
+      # puts ''
+      # p rpc
       
-      afx.render(backgroundcolor, format, quality, scale, filepath, effect_id, width, height, rpc)
+      filepath = 'http://images.aviary.com/imagesv5/aviary_button.png'
+      
+      updated_photos << afx.render(backgroundcolor, format, quality, scale, filepath, effect_id, width, height, rpc)[:url]
     end
   end
   
 
   
   
-  (selected_photos + selected_effects).inspect
+  (selected_photos + selected_effects).inspect + "<br />" + updated_photos.inspect
 end
 
 get '/photos/:id/?' do
