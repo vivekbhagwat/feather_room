@@ -2,14 +2,18 @@
 <html>
 	<head>
 		<title><%=@title%></title>
+		<link rel="stylesheet" href="main.css"/>
 	</head>
 	
 	<body>
 		<h1>Feather Room</h1>
 		<%=@body%>
 		<br/>
-		<%=@footer%>
-		<br/>
-		<a href="http://www.aviary.com"><img src="http://images.aviary.com/imagesv5/aviary_button.png"></a>
+		<div id="footer">
+			<!-- <%=@footer%> -->
+			Created by <a href="http://vivekbhagwat.com">Vivek Bhagwat</a>.
+			<!-- <div style="display:block"/> -->
+			<a href="http://www.aviary.com"><img src="http://images.aviary.com/imagesv5/aviary_button.png"></a>			
+		</div>
 	</body>
 </html>

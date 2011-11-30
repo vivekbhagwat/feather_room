@@ -1,0 +1,60 @@
+h1
+{
+	color:black;
+	text-align:center;
+	font-family:BEBAS,Helvetica,Arial;
+	font-size:50pt;
+}
+h2
+{
+	font-family:Gotham,Helvetica,Arial;
+	color:black;
+	text-align:center;
+	
+}
+h3
+{
+	font-family:Gotham,Helvetica,Arial;
+	color:black;
+	text-align:center;
+}
+form
+{
+	text-align:center;
+/*	border:thin solid black;*/
+	margin-left:47%;
+	margin-right:47%;
+	display:block;
+}
+
+form input
+{
+	padding-top:5px;
+	padding-bottom:10px;
+}
+
+a:visited
+{
+	color:black;
+}
+
+a:hover
+{
+	color:#75B2DD;
+}
+
+div#footer
+{
+	color:black;
+	text-align:center;
+	font-family:Courier;
+	size:8pt;
+}
+
+div#footer a img
+{
+	padding-top:10px;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+}
