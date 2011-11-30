@@ -24,7 +24,7 @@ end
 
 get '/' do
   @title = "Feather Room"
-  @footer = "Created by Vivek Bhagwat"
+  # @footer = "Created by Vivek Bhagwat"
   erb :index
 end
 
@@ -41,7 +41,7 @@ get '/upload/?' do
     {:content => '', :type => 'file', :multiple=>"true", :name=>'urls[]'}
     ], {:value => 'Upload!'}, true).to_html
     
-  @footer = "Created by Vivek Bhagwat"
+  # @footer = "Created by Vivek Bhagwat"
   
   erb :index
 end
